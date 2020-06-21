@@ -10,4 +10,5 @@ The framework has following features
 
 ### Steps to run in IntelliJ or Eclipse:
 1. Run Runner.class file from test as gradle file.
+    ![Alt text`](runnerGradle.jpg?raw=true "Gradle Setting")
 2. Extent report will be available in target/cucumber-reports/report.html
