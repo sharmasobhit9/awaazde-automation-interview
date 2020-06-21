@@ -9,5 +9,5 @@ The framework has following features
 3. Report Generation (Extent Report) 
 
 ### Steps to run in IntelliJ or Eclipse:
-1. Run Runner.class file from test as cucumber file.
+1. Run Runner.class file from test as gradle file.
 2. Extent report will be available in target/cucumber-reports/report.html
