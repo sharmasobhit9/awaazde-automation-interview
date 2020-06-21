@@ -3,11 +3,11 @@ package stepDefinations;
 import cucumber.TestContext;
 import cucumber.api.java.en.*;
 
-public class Moisturizers {
+public class tasks {
 
     TestContext testContext;
-    pageObject.Moistutizer mo;
-    public Moisturizers(TestContext context) {
+    pageObject.tasks mo;
+    public tasks(TestContext context) {
         testContext = context;
         mo = testContext.getPageObjectManager().getMoistutizerPage();
     }
@@ -17,12 +17,17 @@ public class Moisturizers {
         mo.openURL();
     }
 
-    @Then("^verify the task$")
+    @Then("^verify the task to check temperature$")
+    public void verifyTheTaskToCheckTemperature() {
+        mo.checktemp();
+    }
+
+    @And("^verify the task$")
     public void verify_the_task()  {
         mo.Checkout();
     }
 
-    @And("^Pay With Card$")
+    @Then("^Pay With Card$")
     public void payWithCard() {
         mo.pay();
     }
@@ -55,5 +60,10 @@ public class Moisturizers {
     @Then("^pay the bill$")
     public void payTheBill() {
         mo.paybill();
+    }
+
+    @And("^verify payment is successfully done$")
+    public void verifyPaymentIsSuccessfullyDone() {
+        mo.done();
     }
 }
